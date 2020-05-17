@@ -21,7 +21,7 @@ class CreateEventsTable extends Migration
             $table->string('time');
             $table->string('place');
             $table->string('content');
-            $table->integer('capasity');
+            $table->integer('capacity');
             $table->string('deadlinedate');
             $table->string('deadlinetime');
             $table->string('image');

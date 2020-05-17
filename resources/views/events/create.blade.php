@@ -27,10 +27,10 @@
                         {!! Form::label('capacity', '定員') !!}
                         {!! Form::text('capacity','', ['class' => 'form-control mb-3']) !!}
                         
-                        <label for="date">申込締め切り（日にち）</label>
+                        <label>申込締め切り（日にち）</label>
                         <input type="date" name='deadlinedate' class='form-control mb-3'>
                         
-                        <label for="date">申込締め切り（時間）</label>
+                        <label>申込締め切り（時間）</label>
                         <input type="time" name='deadlinetime' class='form-control mb-3'>                    
                         
                         {!! Form::label('image', 'サムネイル用画像') !!}

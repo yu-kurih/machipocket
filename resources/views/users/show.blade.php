@@ -29,6 +29,10 @@
               <th scope="row" class="table-success">申込締め切り</th>
               <td>{{date('Y年m月d日',strtotime($eventdata->deadlinedate)).date('H時i分s秒',strtotime($eventdata->deadlinetime))}}</td>
             </tr>
+            <tr>
+              <th scope="row" class="table-success">追加情報</th>
+              <td>{{ $eventdata->situation}}</td>
+            </tr>
               
           </tbody>
         </table>

@@ -74,7 +74,8 @@ class EventsController extends Controller
         $event->situation = $request->situation;
         $event->save();
 
-        return redirect('admin/home');
+        $last_insert_id = $event->id;
+        return redirect()->route('events.show', ['id' => $last_insert_id]);
     }
 
     /**
@@ -153,8 +154,7 @@ class EventsController extends Controller
         $event->situation = $request->situation;
         $event->save();
 
-        //var_dump($event);
-        return redirect('admin/home');
+        return redirect()->route('events.show', ['id' => $id]);
 
     }
 
@@ -171,7 +171,7 @@ class EventsController extends Controller
         Storage::disk('public_uploads')->delete('images/'.$deleteimagename);
         $event->delete();
 
-        return redirect('admin/home');
+        return redirect()->route('events.list');
     }
     
     
